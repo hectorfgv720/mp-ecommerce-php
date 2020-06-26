@@ -31,10 +31,6 @@ MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb195
             $data = MercadoPago\Invoice::find_by_id($_POST["id"]);
             break;
     }
-
-<<<<<<< Updated upstream
-    print_r($data);
-=======
+    
     var_dump(json_decode($data));
->>>>>>> Stashed changes
 ?>
