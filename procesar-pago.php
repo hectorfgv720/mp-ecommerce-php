@@ -51,7 +51,8 @@
 		'installments' => 6
 	);
 
-	$preference->notification_url = "$basedir/notifications.php?source_news=webhooks";
+	//$preference->notification_url = "$basedir/notifications.php?source_news=webhooks";
+	$preference->notification_url = "https://endxzd0xyfi8n.x.pipedream.net";
 
 	$preference->back_urls = array(
 		'failure' => "$basedir/failure.php",
