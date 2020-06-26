@@ -22,6 +22,7 @@ MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb195
             break;
     }
 
+$mp = "api.mercadopago.com";
 $json_event = file_get_contents('php://input', true);
 $event = json_decode($json_event);
 
