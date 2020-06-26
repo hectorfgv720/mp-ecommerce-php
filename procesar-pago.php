@@ -1,7 +1,8 @@
 <?php
 	require __DIR__ .  '/vendor/autoload.php';
 
-	$basedir = dirname($_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME']);
+	//$basedir = dirname($_SERVER['HTTP_HOST'] . $_SERVER['SCRIPT_NAME']);
+	$basedir = "https://mercado-pago-certificacion.herokuapp.com";
 
 	MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
 	MercadoPago\SDK::setPublicKey('APP_USR-158fff95-0bdf-4149-9abc-c8b0ac7f289f');

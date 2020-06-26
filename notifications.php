@@ -29,4 +29,8 @@ switch($_POST["type"]) {
 
 json_encode($response);
 
+var_dump(http_response_code(201));
+
+var_dump(http_response_code());
+
 ?>
