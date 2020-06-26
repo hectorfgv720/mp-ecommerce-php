@@ -1,4 +1,14 @@
 <?php 
+
+if($json = json_decode(file_get_contents("php://input"), true)) {
+    print_r($json);
+    $data = $json;
+}else {
+    print_r($_POST);
+    $data = $_POST;
+    echo("no jalo");
+    }
+
 require_once './vendor/autoload.php';
 
 MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
@@ -26,5 +36,7 @@ print_r($data);
     }
 
     //print_r($data);
+
+    
 
 ?>
