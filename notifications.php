@@ -1,21 +1,22 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+    MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948");
 
-MercadoPago\SDK::setAccessToken("APP_USR-6317427424180639-042414-47e969706991d3a442922b0702a0da44-469485398");
+    switch($_POST["type"]) {
+        case "payment":
+            $response = MercadoPago\Payment.find_by_id($_POST["id"]);
+            break;
+        case "plan":
+            $response = MercadoPago\Plan.find_by_id($_POST["id"]);
+            break;
+        case "subscription":
+            $response = MercadoPago\Subscription.find_by_id($_POST["id"]);
+            break;
+        case "invoice":
+            $response = MercadoPago\Invoice.find_by_id($_POST["id"]);
+            break;
+    }
 
-$merchant_order = null;
-
-switch ($_GET["topic"]) {
-    case "payment":
-        $payment = MercadoPago\Payment::find_by_id($_GET["id"]);
-        $merchant_order = MercadoPago\MerchantOrder::find_by_id($payment->order->id);
-        break;
-    case "merchant_order":
-        $merchant_order = MercadoPago\MerchantOrder::find_by_id($_GET["id"]);
-        break;
-}
-
-print_r($payment);
+    json_encode($response);
 
 ?>
