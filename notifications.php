@@ -17,6 +17,6 @@
             break;
     }
 
-    print_r($response);
+    json_encode($response);
 
 ?>
