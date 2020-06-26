@@ -19,4 +19,6 @@ switch($_POST["type"]) {
         break;
 }
 
+print_r($payment);
+
 ?>
