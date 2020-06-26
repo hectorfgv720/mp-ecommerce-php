@@ -32,5 +32,9 @@ MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb195
             break;
     }
 
+<<<<<<< Updated upstream
     print_r($data);
+=======
+    var_dump(json_decode($data));
+>>>>>>> Stashed changes
 ?>
