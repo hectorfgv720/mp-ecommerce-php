@@ -22,25 +22,6 @@ MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb195
             break;
     }
 
-$mp = "api.mercadopago.com";
-$json_event = file_get_contents('php://input', true);
-$event = json_decode($json_event);
-
-if ($event->type == 'payment'){
-$payment_info = $mp->get('/v1/payments/'.$event->data->id);
-
-    if ($payment_info["status"] == 200) {
-        print_r($payment_info["response"]);
-
-        print_r ($id_pago_mp= $payment_info["response"]["id"]);
-        print_r ($external_reference  = $payment_info["response"]["external_reference"]);
-        print_r ($fecha_creacion_pago = $payment_info["response"]["date_created"]);
-        print_r ( $fecha_exito_pago = $payment_info["response"]["date_approved"]);
-        print_r ($estatus_pedido = $payment_info["response"]["status_detail"]);
-        print_r ($monto_pago = $payment_info["response"]["transaction_amount"]);
-        print_r ($metodo_pago = $payment_info["response"]["payment_type"]);
-    }
-
-}
+    print_r($data);
 
 ?>
