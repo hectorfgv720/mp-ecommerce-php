@@ -21,6 +21,6 @@ switch($_POST["type"]) {
         break;
 }
 
-json_encode($response);
+print_r($response);
 
 ?>
