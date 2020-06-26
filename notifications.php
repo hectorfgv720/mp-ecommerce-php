@@ -32,5 +32,5 @@ MercadoPago\SDK::setAccessToken("APP_USR-8058997674329963-062418-89271e2424bb195
             break;
     }
 
-    print_r($data);
+    json_decode($data);
 ?>
